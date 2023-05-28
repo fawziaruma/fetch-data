@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Users from '../Users/Users'
+import './User.css'
 
 const User = (props) => {
     const[users, setUsers] = useState([])
@@ -9,7 +10,7 @@ const User = (props) => {
         .then(data => setUsers(data))
     } , [] )
   return (
-    <div>
+    <div className='user-container'>
         
         {
             users.map(us => <Users key={us.id} us={us}></Users>)
